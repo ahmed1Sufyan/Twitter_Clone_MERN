@@ -19,12 +19,12 @@ export const CreatePost = () => {
   const ref = useRef(null);
   const btnRef = useRef(null);
   const handlesubmit = () => {
-    const value = ref.current.value
-    if(!value) return ref.current.focus()
+    const value = ref.current.value;
+    if (!value) return ref.current.focus();
     console.log(ref.current.value);
-  }
+  };
   return (
-    <div className="flex w-full p-4 gap-2 border border-gray-300 rounded-xl">
+    <div className="md:w-full flex w-full p-4 gap-2 border border-gray-300 rounded-xl">
       <div>
         <img
           className="size-12 rounded-full"
@@ -65,7 +65,12 @@ export const CreatePost = () => {
             </div>
           </div>
           <div className="w-[50%] flex justify-end">
-            <Button type="Submit" ref={btnRef} onClick={handlesubmit} className="bg-blue-500 text-white rounded-[30px] px-6 py-2">
+            <Button
+              type="Submit"
+              ref={btnRef}
+              onClick={handlesubmit}
+              className="bg-blue-500 text-white rounded-[30px] px-6 py-2"
+            >
               Post
             </Button>
           </div>

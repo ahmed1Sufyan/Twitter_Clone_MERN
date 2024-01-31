@@ -1,12 +1,15 @@
 import React from "react";
 import { Premium } from "./Premium";
+import { Container } from "./Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment, faHeart, faPodcast, faShare } from "@fortawesome/free-solid-svg-icons";
 
 export const Post = ({image}) => {
   return (
-    <div className="mt-2 flex space-x-5 border border-gray-300 rounded-[10px] p-4">
+    <Container className="mt-2 flex space-x-5 border border-gray-300 rounded-[10px] p-4">
       <div>
         <img
-          className="w-12 h-9 rounded-full "
+          className="w-9 h-9 rounded-[50%]"
           src={image}
           alt="Rounded avatar"
         />
@@ -32,12 +35,21 @@ export const Post = ({image}) => {
           />
         </div>
         <div className="like flex justify-around mt-5">
-          <div>123</div>
-          <div>3.4k</div>
-          <div>8.9k</div>
-          <div>share</div>
+          <div className="px-4">
+           <FontAwesomeIcon icon={faComment} />
+            123
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faPodcast} />
+            3.4k</div>
+          <div>
+          <FontAwesomeIcon icon={faHeart} />
+            8.9k</div>
+          <div>
+          <FontAwesomeIcon icon={faShare} />
+            share</div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
