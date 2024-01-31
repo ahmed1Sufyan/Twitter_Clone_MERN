@@ -14,6 +14,7 @@ import { Allpost } from "./components/Allpost";
 import { LeftSection } from "./components/LeftMenu";
 import { MiddleSection } from "./components/MiddleSection";
 import { RightSection } from "./components/RightSection";
+import {Outlet} from "react-router-dom"
 
 function App() {
   const [set, setstate] = useState(true);
@@ -22,8 +23,7 @@ function App() {
       <Container className="w-full h-screen bg-white ">
         <div className="relative w-[90%] mx-auto flex space-y-2 h-screen px-2 space-x-1 py-2">
           <LeftSection/>
-          
-          <MiddleSection/>
+          <Outlet />
           <RightSection /> 
         </div>
       </Container >

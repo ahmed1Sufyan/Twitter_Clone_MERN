@@ -13,15 +13,18 @@ import {
   faX,
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 export const LSideMenu = () => {
   const Content_Icon = [
     {
       Content: "Home",
       Icon: faHashtag,
+      location : "/"
     },
     {
       Content: "Explore",
       Icon: faMagnifyingGlass,
+      location : "/profile"
     },
     {
       Content: "Notifications",
@@ -57,8 +60,9 @@ export const LSideMenu = () => {
     },
   ];
  
-  return Content_Icon.map((item, idx) => {
+  return  Content_Icon.map((item, idx) => {
     return (
+      <Link to={item?.location}>
       <div
         key={idx}
         className=" w-auto hover:bg-slate-300  cursor-pointer pl-2 text-black py-3 rounded-[30px] font-sans flex  items-center gap-5"
@@ -66,6 +70,7 @@ export const LSideMenu = () => {
         <FontAwesomeIcon className="size-6" icon={item.Icon} />
         <div className="text-xl fon">{item.Content}</div>
       </div>
+      </Link>
     );
   });
 };
