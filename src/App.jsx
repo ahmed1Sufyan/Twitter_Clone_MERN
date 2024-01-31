@@ -79,7 +79,7 @@ function App() {
 
   setTimeout(() => {
     setstate(true);
-  }, 3000);
+  }, 2000);
 
   return (
     <>
